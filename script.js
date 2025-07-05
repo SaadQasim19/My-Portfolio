@@ -124,7 +124,11 @@ function handleSubmit(event) {
 
 // Download CV Function
 function downloadCV() {
+    console.log('Downloading CV...');
     // Create a sample CV content
+    try{
+
+    
     const cvContent = `
 CURRICULUM VITAE
 
@@ -187,7 +191,11 @@ Web Development, Open Source Contribution, Learning New Technologies, UI/UX Desi
     document.body.removeChild(a);
     window.URL.revokeObjectURL(url);
 }
-
+catch (error) {
+    console.error('Error downloading CV:', error);
+    alert('Failed to download CV. Please try again or contact me directly.');
+}
+}
 // Add floating animation to hero elements
 function addFloatingAnimation() {
     const floatingElements = document.querySelectorAll('.floating-element');

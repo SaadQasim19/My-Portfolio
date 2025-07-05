@@ -219,6 +219,11 @@ nav {
     animation: float 6s ease-in-out infinite;
 }
 
+.floating-elements,
+.floating-element {
+    pointer-events: none;
+}
+
 .floating-elements {
     position: absolute;
     width: 100%;
